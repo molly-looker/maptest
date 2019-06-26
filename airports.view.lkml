@@ -1,6 +1,7 @@
 view: airports {
   sql_table_name: public.airports ;;
 
+
   dimension: id {
     primary_key: yes
     type: number
