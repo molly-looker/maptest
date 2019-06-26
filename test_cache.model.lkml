@@ -22,7 +22,7 @@ explore: cache {
  {% if _user_attributes['brandua'] == 'exception' %}
   1=1
   {% else %}
-  EXISTS (SELECT investigation_type FROM ${cache.SQL_TABLE_NAME}  AS accidents
+  EXISTS (SELECT 1 FROM ${cache.SQL_TABLE_NAME}  AS accidents
   WHERE  ((accidents.investigation_type) = '{{ _user_attributes['email'] }}'))
   {% endif %} ;;
 
