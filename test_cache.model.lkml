@@ -23,7 +23,7 @@ explore: airports {
   1=1
   {% else %}
   EXISTS (SELECT 1 FROM public.accidents  AS accidents
-  WHERE  ((accidents.investigation_type) = '{{ _user_attributes['councilcode'] }}'))
+  WHERE  ((accidents.investigation_type) = '{{ _user_attributes['state_test'] }}'))
   {% endif %} ;;
 
 
