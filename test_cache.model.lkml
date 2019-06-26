@@ -19,8 +19,12 @@ explore: airports {
   #sql_always_where:  ${end_of_day_postd_tm_ky} >= 20170101  ;;
   sql_always_where:
 
+ {% if _user_attributes['brandua'] == 'exception' %}
+  1=1
+  {% else %}
   EXISTS (SELECT 1 FROM public.accidents  AS accidents
-  WHERE  ((accidents.investigation_type) = '{{ _user_attributes['email'] }}'));;
+  WHERE  ((accidents.investigation_type) = '{{ _user_attributes['email'] }}'))
+  {% endif %} ;;
 
 
 
