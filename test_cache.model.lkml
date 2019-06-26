@@ -11,7 +11,7 @@ datagroup: dwc_datagroup {
 
 persist_with: dwc_datagroup
 
-explore: airports {
+explore: cache {
   view_label: "Accidents_Cache"
   hidden: yes
 
@@ -22,7 +22,7 @@ explore: airports {
  {% if _user_attributes['brandua'] == 'exception' %}
   1=1
   {% else %}
-  EXISTS (SELECT 1 FROM public.accidents  AS accidents
+  EXISTS (SELECT investigation_type FROM ${cache.SQL_TABLE_NAME}  AS accidents
   WHERE  ((accidents.investigation_type) = '{{ _user_attributes['email'] }}'))
   {% endif %} ;;
 
