@@ -18,6 +18,7 @@ explore: events {
     relationship: many_to_one
   }
 }
+#test commit
 
 explore: inventory_items {
   join: products {
