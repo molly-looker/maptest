@@ -16,6 +16,11 @@ explore: events {
     sql_on: ${events.user_id} = ${users.id} ;;
     relationship: many_to_one
   }
+
+  query: status_by_month {
+    dimensions: [events.type_id]
+    label: "some label"
+  }
 }
 
 explore: inventory_items {
