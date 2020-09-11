@@ -1,3 +1,0 @@
-view: new_view {
-
-}
