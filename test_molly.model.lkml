@@ -4,13 +4,6 @@ connection: "faa_redshift"
 include: "*.view"
 
 
-datagroup: test_molly_default_datagroup {
-  # sql_trigger: SELECT MAX(id) FROM etl_log;;
-  max_cache_age: "1 hour"
-}
-
-persist_with: test_molly_default_datagroup
-
 explore: events {
   join: users {
     type: left_outer
