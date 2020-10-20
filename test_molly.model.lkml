@@ -4,7 +4,7 @@ connection: "faa_redshift"
 include: "*.view"
 
 
-#xxxxxxxx
+######
 explore: events {
   join: users {
     type: left_outer
