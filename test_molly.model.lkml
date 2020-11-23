@@ -4,6 +4,9 @@ connection: "faa_redshift"
 include: "*.view"
 
 
+
+#COMMENT
+
 #xxxxxxxx
 explore: events {
   join: users {
