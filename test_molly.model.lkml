@@ -4,6 +4,8 @@ connection: "faa_redshift"
 include: "*.view"
 
 
+#COMMENT AGAIN
+
 
 #COMMENT
 
